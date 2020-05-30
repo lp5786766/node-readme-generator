@@ -23,9 +23,10 @@ badge
 ///////////
 
 ## Test
-///////////
+```bash
+        ${answers.Tests}
+```
 
 ## Questions:
 - GitHub profile
 - Email
-
