@@ -101,9 +101,11 @@ For testing run this command:
 <pre><code>${answers.Tests}</code></pre>
         
 ## Questions
-For any question regarding this project, please feel free to contact me at ${answers.Email}. 
-![Profile picture](${answers.Picture})
-My GitHub profile: ${answers.Profile}`;
+For any question about this product, please feel free to contact me at ${answers.Email}. 
+
+My GitHub profile: ${answers.Profile}
+
+![Profile picture](${answers.Picture})`;
     }
     const contents = getTemplateMd(answers);
     const homedir = os.homedir();
