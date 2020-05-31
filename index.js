@@ -1,5 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
+const os = require("os");
+const path = require("path");
 
 //The user will be prompted for their GitHub username and other information pertaining to the project the README is for.
 inquirer.prompt([
@@ -13,11 +15,6 @@ inquirer.prompt([
         name: "Description",
         message: "What is your Description?",
     },
-    // {
-    //     type: "input",
-    //     name: "Contents",
-    //     message: "What is your table of contents?",
-    // },
     // {
     //     type: "input",
     //     name: "Installation",
@@ -53,13 +50,18 @@ inquirer.prompt([
     //     name: "Email",
     //     message: "What is your email?",
     // },
-
+    {
+        type: "input",
+        name: "Directory",
+        message: "Where would you like to save your README?",
+        default: "/Desktop/"
+    },
+    
 ]).then((answers) => {
-    // console.log(answers)
+    
     // {
     //     Title: 'afg',
     //     Description: 'arg',
-    //     Contents: 'msry',
     //     Installation: 'aerh',
     //     Usage: 'jsrt',
     //     License: 'zdh',
@@ -69,11 +71,12 @@ inquirer.prompt([
     //     Email: 'aerh'
     // }
     const contents = getTemplateMd(answers)
-    console.log(contents);
+    
+
     function getTemplateMd(answers) {
         const contributors = answers.Contributing
         // console.log(answers);
-        console.log(answers.Title);
+        // console.log(answers.Title);
 
         return `#${answers.Title}
 
@@ -86,21 +89,20 @@ inquirer.prompt([
         ;
         
     }
-
-    // writeToFile(argv, answers);
-    // const md = getTemplateMd(answers);
-
-    // console.log(md);
-
-    // where do I want the file to be placed?desktop? local directory? do I need to check?
-    // fs.writeFile(fileName, md, (err) => {
-    //     if (err) {
-    //         console.error(err);
-    //     }
-    //     console.log("File saved successfully!");
-    // });  
+    console.log(answers.Directory);
+    console.log(contents);
+    
+    const homedir = os.homedir()
+    console.log(homedir);
+    fs.writeFile(`${homedir}${answers.Directory}README.md`, contents, (err) => {
+        if (err) {
+            console.error(err);
+        }
+        console.log("File saved successfully!");
+    });  
 });
 
+// console.log(contents);
  
 
 
