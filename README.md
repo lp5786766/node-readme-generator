@@ -1,6 +1,6 @@
 
 # Calendar App
-[![Generic badge](https://img.shields.io/badge/Lisence-MIT-<COLOR>.svg)]
+![Generic badge](https://img.shields.io/badge/Lisence-MIT-<COLOR>.svg)
 ## Description
 Application for scheduling appointments
 

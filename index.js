@@ -59,6 +59,8 @@ inquirer
   ])
   .then((answers) => {
     function getTemplateMd(answers) {
+      // I want to save this part to potentioally discuss with my tutor:
+      
       // const contributors = (answers.Contributing).split(" ");
       // console.log(contributors);
       // contributors.forEach(function(author) {
@@ -68,7 +70,7 @@ inquirer
 
       return `
 # ${answers.Title}
-[![Generic badge](https://img.shields.io/badge/Lisence-${answers.License}-<COLOR>.svg)]
+![Generic badge](https://img.shields.io/badge/Lisence-${answers.License}-<COLOR>.svg)
 ## Description
 ${answers.Description}
 
@@ -82,7 +84,8 @@ ${answers.Description}
 - [Questions](##questions)
         
 ## Installation
-${answers.Installation}
+For installation run this command:
+<pre><code>${answers.Installation}</code></pre>
 
 ## Usage
 ${answers.Usage}
@@ -96,10 +99,12 @@ ${answers.Contributing}
 
 ## Test
 For testing run this command: 
-        ${answers.Tests}
+
+<pre><code>${answers.Tests}</code></pre>
         
 ## Questions
-For any question regarding this project, please feel free to contact me at ${answers.Email} or my GitHub profile: ${answers.Profile}`;
+For any question regarding this project, please feel free to contact me at ${answers.Email}. 
+My GitHub profile: ${answers.Profile}`;
     }
     const contents = getTemplateMd(answers);
     const homedir = os.homedir();
