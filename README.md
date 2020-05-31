@@ -1,6 +1,6 @@
 
-# New Project
-
+# Calendar App
+[![Generic badge](https://img.shields.io/badge/Lisence-MIT-<COLOR>.svg)]
 ## Description
 Application for scheduling appointments
 
@@ -30,10 +30,5 @@ Luba Pecheneva
 For testing run this command: 
         run test
         
-<<<<<<< HEAD
 ## Questions
 For any question regarding this project, please feel free to contact me at lp5786766@gmail.com or my GitHub profile: https://github.com/lp5786766
-=======
-        ## Questions
-        For any question regarding this project, please feel free to contact me at sryksrk or my GitHub profile: sryjsrt
->>>>>>> 34d14088f0827492ba785b41f129dd51dbd0cc5b
