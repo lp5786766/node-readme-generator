@@ -15,41 +15,41 @@ inquirer.prompt([
         name: "Description",
         message: "What is your Description?",
     },
-    // {
-    //     type: "input",
-    //     name: "Installation",
-    //     message: "How to install the dependencies for your product?",
-    // },
-    // {
-    //     type: "input",
-    //     name: "Usage",
-    //     message: "What is the usage of this product?", 
-    // },
-    // {
-    //     type: "input",
-    //     name: "License",
-    //     message: "What is the license for this product?",
-    // },    
-    // {
-    //     type: "input",
-    //     name: "Contributing",
-    //     message: "Who are the contibuting authors for this product?",
-    // },
-    // {
-    //     type: "input",
-    //     name: "Tests",
-    //     message: "What command will run the tests for this product?",
-    // },
-    // {
-    //     type: "input",
-    //     name: "Profile",
-    //     message: "What is your GitHub profile?",
-    // },
-    // {
-    //     type: "input",
-    //     name: "Email",
-    //     message: "What is your email?",
-    // },
+    {
+        type: "input",
+        name: "Installation",
+        message: "How to install the dependencies for your product?",
+    },
+    {
+        type: "input",
+        name: "Usage",
+        message: "What is the usage of this product?", 
+    },
+    {
+        type: "input",
+        name: "License",
+        message: "What is the license for this product?",
+    },    
+    {
+        type: "input",
+        name: "Contributing",
+        message: "Who are the contibuting authors for this product?",
+    },
+    {
+        type: "input",
+        name: "Tests",
+        message: "What command will run the tests for this product?",
+    },
+    {
+        type: "input",
+        name: "Profile",
+        message: "What is the link to your GitHub profile?",
+    },
+    {
+        type: "input",
+        name: "Email",
+        message: "What is your email?",
+    },
     {
         type: "input",
         name: "Directory",
@@ -70,40 +70,68 @@ inquirer.prompt([
     //     Profile: 'ery',
     //     Email: 'aerh'
     // }
-    const contents = getTemplateMd(answers)
     
-
+    
     function getTemplateMd(answers) {
-        const contributors = answers.Contributing
-        // console.log(answers);
-        // console.log(answers.Title);
-
-        return `#${answers.Title}
-
-       
+        
+        // const contributors = (answers.Contributing).split(" ");
+        // console.log(contributors);
+        // contributors.forEach(function(author) {
+        //     console.log(author);
+        //     return author;
+        // });
+        
+        return `
+        #${answers.Title}
 
         ## Description
         ${answers.Description}
 
-        `
+        ## Table of Contents
+
+        - [Installation](##installation)
+        - [Usage](##usage)
+        - [License](##license)
+        - [Contributing](##contributing)
+        - [Test](##test)
+        - [Questions](##questions)
+        
+        ## Installation
+        ${answers.Installation}
+
+        ## Usage
+        ${answers.Usage}
+
+        ## License
+        ${answers.License}
+
+        ## Contributing
+        
+        ${answers.Contributing}
+
+        ## Test
+        For testing run this command: ${answers.Tests}
+        
+        ## Questions
+        For any question regarding this project, please feel free to contact me at ${answers.Email} or my GitHub profile: ${answers.Profile}`
         ;
         
     }
-    console.log(answers.Directory);
-    console.log(contents);
-    
+    const contents = getTemplateMd(answers);
+    // console.log(answers);
+    // console.log(contents);
+
     const homedir = os.homedir()
     console.log(homedir);
     fs.writeFile(`${homedir}${answers.Directory}README.md`, contents, (err) => {
         if (err) {
             console.error(err);
         }
-        console.log("File saved successfully!");
+        console.log("File saved to Desktop successfully!");
     });  
 });
 
-// console.log(contents);
- 
+
 
 
 // function init() {
@@ -115,33 +143,4 @@ inquirer.prompt([
 
 // init();
 
-// ## Table of Contents
 
-        // - [Installation](##installation) //////
-        // - [Usage](##usage) //////
-        // - [License](##license) //////
-        // - [Installation](##installation) //////
-        // - [Installation](##installation) //////
-
-
-        // ## Installation
-        // ${answers.Installation}
-
-        // ## Usage
-        // ${answers.Usage}
-
-        // ## License
-        // ${answers.License}
-
-        // ## Contributing
-        
-
-        // ## Test
-        // ``
-        // ${answers.Tests}
-        
-        // ``
-        
-        // ## Questions:
-        // - GitHub profile
-        // - Email
