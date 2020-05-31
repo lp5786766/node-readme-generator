@@ -3,7 +3,6 @@ const fs = require("fs");
 const os = require("os");
 const path = require("path");
 
-//The user will be prompted for their GitHub username and other information pertaining to the project the README is for.
 inquirer.prompt([
     {
         type: "input",
@@ -59,19 +58,6 @@ inquirer.prompt([
     
 ]).then((answers) => {
     
-    // {
-    //     Title: 'afg',
-    //     Description: 'arg',
-    //     Installation: 'aerh',
-    //     Usage: 'jsrt',
-    //     License: 'zdh',
-    //     Contributing: 'rtj',
-    //     Tests: 'dsh',
-    //     Profile: 'ery',
-    //     Email: 'aerh'
-    // }
-    
-    
     function getTemplateMd(answers) {
         
         // const contributors = (answers.Contributing).split(" ");
@@ -82,7 +68,7 @@ inquirer.prompt([
         // });
         
         return `
-#${answers.Title}
+# ${answers.Title}
 
 ## Description
 ${answers.Description}
@@ -118,11 +104,8 @@ For any question regarding this project, please feel free to contact me at ${ans
         
 }
     const contents = getTemplateMd(answers);
-    // console.log(answers);
-    // console.log(contents);
-
     const homedir = os.homedir()
-    console.log(homedir);
+
     fs.writeFile(`${homedir}${answers.Directory}README.md`, contents, (err) => {
         if (err) {
             console.error(err);
@@ -130,17 +113,3 @@ For any question regarding this project, please feel free to contact me at ${ans
         console.log("File saved to Desktop successfully!");
     });  
 });
-
-
-
-
-// function init() {
-
-// }
-
-
-
-
-// init();
-
-
