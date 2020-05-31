@@ -14,7 +14,7 @@ Application for scheduling appointments
 - [Questions](##questions)
         
 ## Installation
-npm install
+<pre><code>npm install</code></pre>
 
 ## Usage
 Product supports both client side and moderator side of the calendar
@@ -28,7 +28,8 @@ Luba Pecheneva
 
 ## Test
 For testing run this command: 
-        run test
+<pre><code>run test</code></pre>
         
 ## Questions
-For any question regarding this project, please feel free to contact me at lp5786766@gmail.com or my GitHub profile: https://github.com/lp5786766
+For any question regarding this project, please feel free to contact me at lp5786766@gmail.com. 
+My GitHub profile: https://github.com/lp5786766
