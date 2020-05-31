@@ -82,41 +82,41 @@ inquirer.prompt([
         // });
         
         return `
-        #${answers.Title}
+#${answers.Title}
 
-        ## Description
-        ${answers.Description}
+## Description
+${answers.Description}
 
-        ## Table of Contents
+## Table of Contents
 
-        - [Installation](##installation)
-        - [Usage](##usage)
-        - [License](##license)
-        - [Contributing](##contributing)
-        - [Test](##test)
-        - [Questions](##questions)
+- [Installation](##installation)
+- [Usage](##usage)
+- [License](##license)
+- [Contributing](##contributing)
+- [Test](##test)
+- [Questions](##questions)
         
-        ## Installation
-        ${answers.Installation}
+## Installation
+${answers.Installation}
 
-        ## Usage
-        ${answers.Usage}
+## Usage
+${answers.Usage}
 
-        ## License
-        ${answers.License}
+## License
+${answers.License}
 
-        ## Contributing
+## Contributing
         
-        ${answers.Contributing}
+${answers.Contributing}
 
-        ## Test
-        For testing run this command: ${answers.Tests}
+## Test
+For testing run this command: 
+        ${answers.Tests}
         
-        ## Questions
-        For any question regarding this project, please feel free to contact me at ${answers.Email} or my GitHub profile: ${answers.Profile}`
-        ;
+## Questions
+For any question regarding this project, please feel free to contact me at ${answers.Email} or my GitHub profile: ${answers.Profile}`;
         
-    }
+}
     const contents = getTemplateMd(answers);
     // console.log(answers);
     // console.log(contents);

@@ -1,33 +1,34 @@
 
-        #e5hse5j
+#New Project
 
-        ## Description
-        srjsrj
+## Description
+Application for scheduling appointments
 
-        ## Table of Contents
+## Table of Contents
 
-        - [Installation](##installation)
-        - [Usage](##usage)
-        - [License](##license)
-        - [Contributing](##contributing)
-        - [Test](##test)
-        - [Questions](##questions)
+- [Installation](##installation)
+- [Usage](##usage)
+- [License](##license)
+- [Contributing](##contributing)
+- [Test](##test)
+- [Questions](##questions)
         
-        ## Installation
-        srjsr
+## Installation
+npm install
 
-        ## Usage
-        srtjsrj
+## Usage
+Product supports both client side and moderator side of the calendar
 
-        ## License
-        srtmdr
+## License
+MIT
 
-        ## Contributing
+## Contributing
         
-        luba anya
+Luba Pecheneva
 
-        ## Test
-        For testing run this command: srtjsr
+## Test
+For testing run this command: 
+        run test
         
-        ## Questions
-        For any question regarding this project, please feel free to contact me at sryksrk or my GitHub profile: sryjsrt
+## Questions
+For any question regarding this project, please feel free to contact me at lp5786766@gmail.com or my GitHub profile: https://github.com/lp5786766
