@@ -1,8 +1,8 @@
 
-# Calendar App
-![Generic badge](https://img.shields.io/badge/Lisence-MIT-<COLOR>.svg)
+# Node Readme Generator
+![Generic badge](https://img.shields.io/badge/Lisence-RSM-<COLOR>.svg)
 ## Description
-Application for scheduling appointments
+App that generates README.md
 
 ## Table of Contents
 
@@ -14,13 +14,14 @@ Application for scheduling appointments
 - [Questions](##questions)
         
 ## Installation
+For installation run this command:
 <pre><code>npm install</code></pre>
 
 ## Usage
-Product supports both client side and moderator side of the calendar
+The product is used to create simple REAMDE file by answering questions
 
 ## License
-MIT
+RSM
 
 ## Contributing
         
@@ -28,10 +29,10 @@ Luba Pecheneva
 
 ## Test
 For testing run this command: 
-<pre><code>run test</code></pre>
+<pre><code>npm run test</code></pre>
         
 ## Questions
-For any question regarding this project, please feel free to contact me at lp5786766@gmail.com. 
+For any question about this product, please feel free to contact me at lp5786766@gmail.com. 
 
 My GitHub profile: https://github.com/lp5786766
 
